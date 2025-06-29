@@ -20,7 +20,7 @@ dev-dependencies = [
 
 [tool.pytest.ini_options]
 minversion = "8.4.1"
-addopts = "--cov=app --cov-report=term-missing"
+addopts = "--cov=app --cov-report=term-missing --cov-fail-under=10"
 testpaths = [
     "tests",
 ]
