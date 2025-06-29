@@ -1,0 +1,14 @@
+{
+    "1": {
+        "YearBuilt": 1999,
+        "InteriorArea": 1234,
+        "ModelDate": "2025-06-29"
+    },
+    "2": {
+        "LotArea": 12345,
+        "YearBuilt": 1899,
+        "InteriorArea": 1234,
+        "ModelDate": "2025-06-15"
+    },
+    "3": {}
+}

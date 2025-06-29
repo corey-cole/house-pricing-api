@@ -1,0 +1,1 @@
+This project uses Python 3.12 and FastAPI.  Dependencies are managed with uv.  Work items are tracked as GitHub issues.  The project is hosted on GitHub and uses GitHub Actions for CI/CD.

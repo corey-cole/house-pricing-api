@@ -1,0 +1,29 @@
+[project]
+name = "house-pricing-api"
+version = "0.1.0"
+description = "Sample inference hosting project"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "fastapi[standard]>=0.115.14",
+    "prometheus-fastapi-instrumentator>=7.1.0",
+    "pydantic-settings>=2.2.0",
+    "prometheus-client>=0.20.0",
+]
+
+[tool.uv]
+dev-dependencies = [
+    "pytest>=8.4.1",
+    "pytest-cov>=6.2.1",
+]
+
+[tool.pytest.ini_options]
+minversion = "8.4.1"
+addopts = "--cov=app --cov-report=term-missing"
+testpaths = [
+    "tests",
+]
+
+[tool.coverage.run]
+source = ["app"]
+omit = ["app/__init__.py", "app/core/__init__.py", "app/v1/__init__.py"]
