@@ -15,6 +15,7 @@ dependencies = [
 dev-dependencies = [
     "pytest>=8.4.1",
     "pytest-cov>=6.2.1",
+    "ruff>=0.12.1",
 ]
 
 [tool.pytest.ini_options]
@@ -27,3 +28,16 @@ testpaths = [
 [tool.coverage.run]
 source = ["app"]
 omit = ["app/__init__.py", "app/core/__init__.py", "app/v1/__init__.py"]
+
+[tool.ruff]
+# Set the minimum Python version to lint for.
+target-version = "py312"
+exclude = ["tests/"]
+line-length = 120
+
+[tool.ruff.lint]
+# Enable the default rules (E, F) plus the requested ones.
+# B: flake8-bugbear (finds likely bugs and design problems)
+# S: flake8-bandit (finds common security issues)
+# ASYNC: flake8-async (finds common async programming mistakes)
+select = ["E", "F", "B", "S", "ASYNC"]

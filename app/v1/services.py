@@ -20,13 +20,17 @@ def predict_price(house_data_tuple: tuple[str, HouseData]) -> tuple[str, Union[P
     start_time = time.time()
     try:
         # Simulate ML model inference time
-        time.sleep(random.uniform(0.05, 0.2))
+        time.sleep(random.uniform(0.05, 0.2))  # noqa: S311
 
         # Dummy prediction logic
         if house_data.YearBuilt < 1800:
             raise ValueError("Model cannot handle houses built before 1800")
 
-        sale_price = int((house_data.LotArea * 10) + (house_data.InteriorArea * 50) - (date.today().year - house_data.YearBuilt) * 100)
+        sale_price = int(
+            (house_data.LotArea * 10)
+            + (house_data.InteriorArea * 50)
+            - (date.today().year - house_data.YearBuilt) * 100
+        )
 
         prediction = Prediction(SalePrice=max(50000, sale_price), ModelDate=date.today())
         return request_id, prediction

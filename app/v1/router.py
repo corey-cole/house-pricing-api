@@ -1,7 +1,7 @@
 import multiprocessing
 from typing import Any, Dict
 
-from fastapi import APIRouter, HTTPException
+from fastapi import APIRouter
 
 from .schemas import PredictionRequest, PredictionResponse
 from .services import predict_price

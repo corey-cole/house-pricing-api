@@ -21,6 +21,7 @@ class PredictionRequest(RootModel[dict[str, HouseData]]):
     def items(self):
         return self.root.items()
 
+
 class Prediction(BaseModel):
     SalePrice: PositiveInt
     ModelDate: date

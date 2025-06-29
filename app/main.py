@@ -57,6 +57,7 @@ app.add_route("/metrics", metrics)
 
 app.include_router(v1_router.router, prefix=settings.API_V1_STR)
 
+
 @app.get("/")
 def read_root():
     return {"message": f"Welcome to {settings.APP_NAME}"}
