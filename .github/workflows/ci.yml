@@ -2,6 +2,8 @@
 # Runs tests and linter on pull requests
 
 name: CI
+permissions:
+  contents: read
 
 on:
   pull_request:
